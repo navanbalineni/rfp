@@ -1,4 +1,4 @@
-{
+ {
   "version": 2,
   "rewrites": [
     { "source": "/scan", "destination": "/api/index.py" },
