@@ -8,7 +8,7 @@ import uvicorn
 
 # New imports for Image Processing
 from PIL import Image
-from pyzbar.pyzbar import decode
+
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -91,6 +91,4 @@ async def scan(file: Optional[UploadFile] = File(None), manual_barcode: Optional
         return {"success": False, "message": "No input provided."}
 
     return {"success": True, "data": results}
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+ 
